@@ -28,7 +28,7 @@ const Books = () => {
         <th scope="col" style={{ width: "5%" }}>ID</th>
         <th scope="col" style={{ width: "35%" }}>Book</th>
         <th scope="col" style={{ width: "25%" }}>Author</th>
-        <th scope="col" style={{ width: "20%" }}>Category</th>
+        <th scope="col" style={{ width: "20%" }}>Categoryy</th>
         <th scope="col" style={{ width: "10%" }} className="text-center">Action</th>
       </tr>
     </thead>
