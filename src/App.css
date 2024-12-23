@@ -1,0 +1,43 @@
+.navbar {
+    width: 100%;
+    height: 56px;
+    position: fixed; /* Fix the toolbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .app-container {
+    margin-top: 50px; 
+  }
+  
+  .sidebar {
+    height: calc(100vh - 56px); /* Full height minus the toolbar height */
+    width: 250px;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.closed {
+    width: 60px;
+  }
+  
+  .sidebar-icon {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover,
+  .active-link {
+    background-color: #495057; /* Active link highlight */
+    color: #fff;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
