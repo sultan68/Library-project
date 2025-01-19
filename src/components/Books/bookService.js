@@ -2,11 +2,14 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:3001/books"; // JSON Server URL
 
+const BASE_URL_CATEGORY = "http://localhost:3001/categories";
 const BookService = {
   getBooks: () => axios.get(BASE_URL),
   deleteBook: (id) => axios.delete(`${BASE_URL}/${id}`),
   searchBooks: (query) => axios.get(`${BASE_URL}?book_like=${query}`), // Search by book name
   getBookById: (id) => axios.get(`${BASE_URL}?id=${id}`), // Fetch book by ID
+  getCategories: () => axios.get(BASE_URL_CATEGORY),
+
   createBook: async (bookData) => {
     // Fetch the existing books to get the last ID
     const response = await axios.get(BASE_URL);

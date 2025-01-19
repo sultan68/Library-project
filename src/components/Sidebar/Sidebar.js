@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen }) => {
 
         <li>
           <NavLink
-            to="/books"
+            to="/bookIssued"
             className="nav-link text-white d-flex align-items-center"
             activeClassName="active-link"
           >

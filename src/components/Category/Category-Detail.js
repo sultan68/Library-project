@@ -10,13 +10,14 @@ const CategoryDetail = () => {
     name: "",
     description: "",
     code: "",
-    availableStatus: "",
+    availableStatus: "Available",
   });
 
   const [toastMessage, setToastMessage] = useState("");
 
   useEffect(() => {
-    if (id) {
+    console.log("Editing Book ID:", id);
+    if (id && id !== "new") {
       fetchCategoryDetails();
     }
   }, [id]);
@@ -37,24 +38,29 @@ const CategoryDetail = () => {
   };
 
   const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setCategory((prev) => ({ ...prev, [id]: value }));
+    const { name, value } = e.target; // Use name here
+    setCategory((prev) => ({ ...prev, [name]: value })); // Update based on name
   };
 
   const handleSave = async () => {
     try {
-      if (id) {
-        await CategoryService.updateCategory(id, category);
+      console.log("Category Payload:", category);
+      console.log("Cid", id);
+      if (id !== "new") {
+        const response = await CategoryService.updateCategory(id, category);
+        console.log("Update Response:", response);
         setToastMessage("Category updated successfully!");
       } else {
-        await CategoryService.createCategory(category);
+        const response = await CategoryService.createCategory(category);
+        console.log("Create Response:", response);
         setToastMessage("Category added successfully!");
         navigate("/categories");
       }
+  
       setTimeout(() => setToastMessage(""), 3000);
- 
     } catch (error) {
-      console.error("Error saving category:", error);
+      console.error("Error saving category:", error.response?.data || error.message);
+      alert(`Error saving category: ${error.message}`);
     }
   };
 

@@ -102,7 +102,7 @@ const Books = () => {
           <table className="table table-striped table-hover table-bordered mb-0">
             <thead style={{ backgroundColor: "grey", textAlign: "center" }}>
               <tr>
-                <th scope="col" style={{ width: "5%" }}>ID</th>
+                <th scope="col" style={{ width: "5%" }}>IDsss</th>
                 <th scope="col" style={{ width: "35%" }}>Book</th>
                 <th scope="col" style={{ width: "25%" }}>Author</th>
                 <th scope="col" style={{ width: "20%" }}>Category</th>
@@ -117,7 +117,7 @@ const Books = () => {
                     <td>{book.id}</td>
                     <td>{book.book}</td>
                     <td>{book.author}</td>
-                    <td>{book.category}</td>
+                    <td>{book.category.name}</td>
                     <td className="text-center">
                       <span
                         className={`badge ${book.available === "stock" ? "bg-success" : "bg-secondary"

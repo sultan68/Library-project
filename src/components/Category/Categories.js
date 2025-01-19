@@ -65,6 +65,7 @@ const Categories = () => {
                     <button
                         className="btn btn-primary"
                         onClick={() => navigate("./category-detail/new")}
+
                     >
                         New
                     </button>
@@ -94,6 +95,7 @@ const Categories = () => {
                                 <Link to={`./category-detail/${category.id}`}>
                                     <FaEdit className="me-3 text-primary" />
                                 </Link>
+                            
                                 <FaTrash
                                     className="text-danger"
                                     onClick={() => handleDeleteClick(category.id)}

@@ -8,6 +8,8 @@ import BooksDetail from "./components/Books/book-detail";
 import "./App.css";
 import Categories from "./components/Category/Categories";
 import CategoryDetail from "./components/Category/Category-Detail";
+import BookIssued from "./components/Issued_book/BookIssued";
+import BookIssuedDetail from "./components/Issued_book/BookIssued_Detail";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -41,9 +43,11 @@ const App = () => {
               <Route path="category/category-detail/new" element={<CategoryDetail />} />
               <Route path="categories/category-detail/:id" element={<CategoryDetail />} />
 
-
+              <Route path="/bookIssued" element={<BookIssued />} />
+              <Route path="bookIssued/bookIssued-detail/new" element={<BookIssuedDetail />} />
+              <Route path="bookIssued/bookIssued-detail/:id" element={<BookIssuedDetail />} />
             </Routes>
-          </div>
+          </div>''
         </div>
       </div>
     </Router>

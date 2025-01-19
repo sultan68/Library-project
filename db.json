@@ -1,168 +1,85 @@
 {
   "books": [
     {
-      "book": "The Alchemist",
-      "author": "Paulo Coelho",
-      "category": "Fiction",
+      "book": "First book",
+      "author": "first author",
+      "category": {
+        "id": "1",
+        "name": "Fictions",
+        "description": "Books that contain imaginary events and characters.",
+        "code": "FIC",
+        "availableStatus": "Available"
+      },
       "available": "stock",
       "id": "1"
     },
     {
-      "id": "2",
-      "book": "1984",
-      "author": "George Orwell",
-      "category": "Dystopian",
-      "available": "outofstock"
+      "book": "second book",
+      "author": "system",
+      "category": {
+        "name": "Horror",
+        "description": "wsda",
+        "code": "asd",
+        "availableStatus": "Available",
+        "id": "2"
+      },
+      "available": "stock",
+      "id": "2"
     },
     {
-      "book": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "category": "Classic",
+      "book": "test",
+      "author": "tes2",
+      "category": {
+        "id": "3",
+        "name": "fancy",
+        "description": "test",
+        "code": "tes-0",
+        "availableStatus": "Available"
+      },
       "available": "stock",
       "id": "3"
-    },
-    {
-      "id": "4",
-      "book": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "category": "Classic",
-      "available": "outofstock"
-    },
-    {
-      "id": "5",
-      "book": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "category": "Romance",
-      "available": "stock"
-    },
-    {
-      "id": "6",
-      "book": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "category": "Fiction",
-      "available": "outofstock"
-    },
-    {
-      "id": "8",
-      "book": "Brave New World",
-      "author": "Aldous Huxley",
-      "category": "Science Fiction",
-      "available": "outofstock"
-    },
-    {
-      "id": "9",
-      "book": "Moby-Dick",
-      "author": "Herman Melville",
-      "category": "Adventure",
-      "available": "stock"
-    },
-    {
-      "id": "10",
-      "book": "Jane Eyre",
-      "author": "Charlotte Brontë",
-      "category": "Classic",
-      "available": "outofstock"
-    },
-    {
-      "book": "Wuthering Heights",
-      "author": "Emily Brontë",
-      "category": "Romance",
-      "available": "stock",
-      "id": "11"
-    },
-    {
-      "id": "12",
-      "book": "Frankenstein",
-      "author": "Mary Shelley",
-      "category": "Horror",
-      "available": "outofstock"
-    },
-    {
-      "id": "13",
-      "book": "Dracula",
-      "author": "Bram Stoker",
-      "category": "Horror",
-      "available": "stock"
-    },
-    {
-      "id": "14",
-      "book": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "category": "Classic",
-      "available": "stock"
-    },
-    {
-      "id": "15",
-      "book": "War and Peace",
-      "author": "Leo Tolstoy",
-      "category": "Historical Fiction",
-      "available": "outofstock"
-    },
-    {
-      "id": "16",
-      "book": "The Odyssey",
-      "author": "Homer",
-      "category": "Epic Poetry",
-      "available": "stock"
-    },
-    {
-      "id": "17",
-      "book": "The Divine Comedy",
-      "author": "Dante Alighieri",
-      "category": "Poetry",
-      "available": "outofstock"
-    },
-    {
-      "id": "19",
-      "book": "Don Quixote",
-      "author": "Miguel de Cervantes",
-      "category": "Adventure",
-      "available": "outofstock"
-    },
-    {
-      "id": "21",
-      "book": "harry potter",
-      "author": "book",
-      "category": "20 ",
-      "available": "stock"
-    },
-    {
-      "id": "22",
-      "book": "harry potter",
-      "author": "book",
-      "category": "20 ",
-      "available": "stock"
-    },
-    {
-      "id": "24",
-      "book": "Shichan the pysco killer ",
-      "author": "ANJUM",
-      "category": "maezz",
-      "available": "stock"
-    },
-    {
-      "book": "harry potter",
-      "author": "welcome home",
-      "category": "sishe",
-      "available": "stock",
-      "id": "25"
     }
   ],
   "categories": [
     {
-      "name": "Fiction",
+      "name": "Fictions",
       "description": "Books that contain imaginary events and characters.",
       "code": "FIC",
       "availableStatus": "Available",
-      "": "FIC;",
       "id": "1"
     },
     {
+      "name": "Horror",
+      "description": "wsda",
+      "code": "asd",
+      "availableStatus": "Available",
+      "id": "2"
+    }
+  ],
+  "bookIssued": [
+    {
       "id": "2",
-      "name": "Science",
-      "description": "Books related to scientific studies and research.",
-      "code": "SCI",
-      "availableStatus": "Out of Stock"
+      "personName": "sammer",
+      "bookId": "1",
+      "categoryId": "1",
+      "mobileNumber": "7021743978",
+      "address": "street mumbai"
+    },
+    {
+      "id": "3",
+      "personName": "altaf",
+      "bookId": "1",
+      "categoryId": "1",
+      "mobileNumber": "7021749160",
+      "address": "street"
+    },
+    {
+      "id": "4",
+      "personName": "priyanshu ",
+      "bookId": "2",
+      "categoryId": "2",
+      "mobileNumber": "7021749160",
+      "address": ""
     }
   ]
 }

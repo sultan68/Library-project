@@ -9,11 +9,16 @@ const CategoryService = {
   createCategory: async (categoryData) => {
     const response = await axios.get(BASE_URL);
     const categories = response.data;
-    const newId = categories.length ? Math.max(...categories.map(c => c.id)) + 1 : 1;
+    const lastId = categories.length ? Math.max(...categories.map(cat => parseInt(cat.id))) : 0;
+    const newId = lastId + 1; // Generate the next available ID
     const newCategory = { ...categoryData, id: newId };
     return axios.post(BASE_URL, newCategory);
   },
+
   updateCategory: (id, categoryData) => axios.put(`${BASE_URL}/${id}`, categoryData),
+
+
 };
+
 
 export default CategoryService;
